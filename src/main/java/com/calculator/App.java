@@ -10,6 +10,7 @@ public class App
 	
 	//adding this comment just to push into the repository
 	// and the changes continue
+	// and the last check
     public static void main( String[] args )
     {
         String s = "stop";
