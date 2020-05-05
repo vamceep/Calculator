@@ -20,7 +20,7 @@ public class App
                 exp = sc. nextLine();
             } 
             catch (Exception e){
-                exp = "4+9";
+                exp = "stop";
             }
             if(exp.equals("stop")) {
             	sc.close();
