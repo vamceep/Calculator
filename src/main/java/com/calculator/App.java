@@ -9,12 +9,19 @@ public class App
 {
     public static void main( String[] args )
     {
+        String s = "stop";
     	Scanner sc = new Scanner(System.in);
     	System.out.println("Enter an expression in the below defined format:\nvar1 operator var2\nWhere var1, var2 are numbers and operator is '+'  or '-'\nEnter stop to exit.");
         boolean stop = false;
         while(!stop) {
         	
-            String exp = sc. nextLine();
+            String exp = s;
+            try{
+                exp = sc. nextLine();
+            } 
+            catch (Exception e){
+                exp = "4+9";
+            }
             if(exp.equals("stop")) {
             	sc.close();
             	return;
