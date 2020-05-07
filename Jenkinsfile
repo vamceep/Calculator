@@ -1,5 +1,5 @@
 node {
-    def calcy
+    def app
 
     stage('Clone repository') {
         /* Cloning the Repository to our Workspace */
@@ -16,7 +16,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        calcy = docker.build("vamceep99/calculator")
+        app = docker.build("vamceep99/calculator")
     }
 
     /*stage('Test image') {
