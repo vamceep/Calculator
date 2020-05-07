@@ -1,6 +1,5 @@
 node {
     def app
-   //def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
     stage('Clone repp') {
         /* Cloning the Repository to our Workspace */
 
@@ -9,11 +8,10 @@ node {
     
     stage('Build Executable Jar'){
         //steps {
-        //sh 'mvn clean test package'
-        withMaven {
-             sh 'mvn clean test package'
-            }
-             echo "mvn build succesful"
+	tool myMvn: 'M3', type: 'maven'
+	sh {myMvn}/bin/mvn clean test package"
+        
+        echo "mvn build succesful"
         //}
     }
 
