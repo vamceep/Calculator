@@ -8,10 +8,10 @@ node {
     }
     
     stage('Build Executable Jar'){
-        steps {
+        //steps {
              sh 'mvn clean test package'
              echo "mvn build succesful"
-        }
+        //}
     }
 
     stage('Build image') {
