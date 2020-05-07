@@ -16,7 +16,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("vamceep99/calculator")
+        calcy = docker.build("vamceep99/calculator")
     }
 
     /*stage('Test image') {
