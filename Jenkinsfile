@@ -18,7 +18,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("vamceep99/calculator")
+        app = docker.build("vamceep/calculator")
         echo "docker build succesful"
     }
 
