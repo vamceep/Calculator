@@ -8,7 +8,7 @@ node {
     
     stage('Build Executable Jar'){
         //steps {
-	var myMvn = tool name: 'M3', type: 'maven'
+	def myMvn = tool name: 'M3', type: 'maven'
 	sh "${myMvn}/bin/mvn clean test package"
         
         echo "mvn build succesful"
