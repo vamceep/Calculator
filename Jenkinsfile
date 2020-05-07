@@ -1,6 +1,6 @@
 node {
     def app
-
+	def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
     stage('Clone repp') {
         /* Cloning the Repository to our Workspace */
 
