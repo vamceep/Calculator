@@ -9,7 +9,7 @@ node {
     stage('Build Executable Jar'){
         //steps {
 	tool myMvn: 'M3', type: 'maven'
-	sh {myMvn}/bin/mvn clean test package"
+	sh "${myMvn}/bin/mvn clean test package"
         
         echo "mvn build succesful"
         //}
