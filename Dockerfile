@@ -1,4 +1,4 @@
 FROM openjdk:12-alpine
-COPY hello.java Hello.java
+COPY target/Calculator*.jar calculator.jar
 RUN apk --update add openjdk8-jre
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "Hello.java"]
+ENTRYPOINT ["java", "-cp", "calculator.jar", "-Djava.security.egd=file:/dev/./urandom", "com.calculator.App"]
