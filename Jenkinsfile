@@ -9,7 +9,10 @@ node {
     
     stage('Build Executable Jar'){
         //steps {
+        //sh 'mvn clean test package'
+        withMavin {
              sh 'mvn clean test package'
+            }
              echo "mvn build succesful"
         //}
     }
