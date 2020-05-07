@@ -1,7 +1,7 @@
 node {
     def app
 
-    stage('Clone repo') {
+    stage('Clone repp') {
         /* Cloning the Repository to our Workspace */
 
         checkout scm
