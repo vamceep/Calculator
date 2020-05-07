@@ -6,6 +6,12 @@ node {
 
         checkout scm
     }
+    
+    stage('Build Executable Jar'){
+        steps {
+             sh 'mvn clean test package'
+        }
+    }
 
     stage('Build image') {
         /* This builds the actual image */
