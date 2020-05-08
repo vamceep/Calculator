@@ -36,12 +36,13 @@ node {
            
             app.push("${env.BUILD_NUMBER}")
            // app.push("latest")
-            } 
-                echo "Trying to Push Docker Build to DockerHub"
+         } 
+         echo "Trying to Push Docker Build to DockerHub"
     }
-	/*stage('Delete docker image from host') {
-		sh "docker rmi registry.hub.docker.com/vamceep/calculator:${env.BUILD_NUMBER}"
-		sh "docker rmi vamceep/calculator:latest"
+    
+    stage('Delete docker images') {
+	sh "docker rmi registry.hub.docker.com/vamceep/calculator:${env.BUILD_NUMBER}"
+	sh "docker rmi vamceep/calculator:latest"
 	    
-	}*/
+    }
 }
