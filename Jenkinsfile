@@ -42,7 +42,7 @@ node {
     
     stage('Delete docker images') {
 	sh "docker rmi registry.hub.docker.com/vamceep/calculator:${env.BUILD_NUMBER}"
-	sh "docker rmi vamceep/calculator:latest"
+	//sh "docker rmi vamceep/calculator:latest"
 	    
     }
 }
