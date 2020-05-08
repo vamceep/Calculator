@@ -17,7 +17,8 @@ node {
 
     stage('Build image') {
         /* This builds the actual image */
-	sh "docker rmi vamceeep/calculator"
+	    if(sh "docker rmi vamceeep/calculator") {
+	    }
         app = docker.build("vamceep/calculator")
         echo "docker build succesful"
     }
