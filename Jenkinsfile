@@ -17,7 +17,7 @@ node {
 
     stage('Build image') {
         /* This builds the actual image */
-        app = docker.build("vamceep/calculator")
+        //app = docker.build("vamceep/calculator")
         echo "docker build succesful"
     }
 
@@ -35,11 +35,12 @@ node {
         docker.withRegistry('https://registry.hub.docker.com', 'docker_hub') {
             echo "${env.BUILD_NUMBER}"
             app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+           // app.push("latest")
             } 
                 echo "Trying to Push Docker Build to DockerHub"
     }
 	stage('Delete docker image from host') {
 	    sh "docker rmi vamceeep/calculator"
+	    
 	}
 }
