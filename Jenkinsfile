@@ -20,13 +20,15 @@ node {
         //app = docker.build("vamceep/calculator")
         echo "docker build succesful"
     }
-
+/*
     stage('Test image') {
         
         app.inside {
             echo "Tests passed"
         }
     }
+    
+    */
 
     stage('Push image') {
         /* 
