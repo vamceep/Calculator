@@ -40,7 +40,8 @@ node {
                 echo "Trying to Push Docker Build to DockerHub"
     }
 	/*stage('Delete docker image from host') {
-		sh "docker rmi vamceeep/calculator:${env.BUILD_NUMBER}"
+		sh "docker rmi registry.hub.docker.com/vamceep/calculator:${env.BUILD_NUMBER}"
+		sh "docker rmi vamceep/calculator:latest"
 	    
 	}*/
 }
