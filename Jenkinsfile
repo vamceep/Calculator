@@ -17,8 +17,10 @@ node {
 
     stage('Build image') {
         /* This builds the actual image */
-	    if(sh "docker rmi vamceeep/calculator") {
-	    }
+//	    if( "$(docker images -q myimage:mytag 2> /dev/null)" == "" ){}
+//	    else {
+		def val = sh "docker rmi vamceeep/calculator"
+//	}
         app = docker.build("vamceep/calculator")
         echo "docker build succesful"
     }
