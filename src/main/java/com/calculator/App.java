@@ -30,7 +30,7 @@ public class App
             	sc.close();
             	return;
             }
-       		String[] str = exp.split("[-+*/]");
+       		String[] str = exp.split("[-+*/%]");
        		
             char op = exp.charAt(str[0].length());
             Double v1 = Double.parseDouble(str[0].trim());
