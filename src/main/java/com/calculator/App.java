@@ -43,6 +43,8 @@ public class App
             	new Multiplication(v1,v2);
             else if(op == '/')
             	new Division(v1,v2);
+            else if(op == '%')
+            	new Mod(v1,v2);
             else 
                 System.out.println("wrong option");
 	    }
