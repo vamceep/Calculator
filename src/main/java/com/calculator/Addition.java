@@ -1,7 +1,7 @@
 package com.calculator;
 
 public class Addition {
-	public Addition(int i, int j) {
+	public Addition(Double i, Double j) {
 		System.out.println(i+j);
 	}
 }

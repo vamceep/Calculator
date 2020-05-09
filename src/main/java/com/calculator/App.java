@@ -31,14 +31,18 @@ public class App
             	return;
             }
        		String[] str = exp.split("[-+*/]");
-
+       		
             char op = exp.charAt(str[0].length());
-            int v1 = Integer.parseInt(str[0].trim());
-            int v2 = Integer.parseInt(str[1].trim());
+            Double v1 = Double.parseDouble(str[0].trim());
+            Double v2 = Double.parseDouble(str[1].trim());
             if(op == '+')
                 new Addition(v1, v2);
             else if(op == '-')
                 new Substraction(v1,v2);
+            else if(op == '*')
+            	new Multiplication(v1,v2);
+            else if(op == '/')
+            	new Division(v1,v2);
             else 
                 System.out.println("wrong option");
 	    }

@@ -1,7 +1,7 @@
 package com.calculator;
 
 public class Substraction {
-	public Substraction(int i, int j) {
+	public Substraction(Double i, Double j) {
 		System.out.println(i-j);
 	}
 }
