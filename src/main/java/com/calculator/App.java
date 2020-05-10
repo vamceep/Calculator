@@ -30,7 +30,7 @@ public class App
             	sc.close();
             	return;
             }
-       		String[] str = exp.split("[-+*/%]");
+       		String[] str = exp.split("[-+*/%^]");
        		
             char op = exp.charAt(str[0].length());
             Double v1 = Double.parseDouble(str[0].trim());
@@ -45,6 +45,8 @@ public class App
             	new Division(v1,v2);
             else if(op == '%')
             	new Mod(v1,v2);
+            else if(op == '^')
+            	new Power(v1, v2);
             else 
                 System.out.println("wrong option");
 	    }
